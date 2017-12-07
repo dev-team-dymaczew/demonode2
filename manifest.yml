@@ -1,0 +1,10 @@
+applications:
+  - instances: 1
+    timeout: 180
+    name: demonode2
+    buildpack: sdk-for-nodejs
+    command: 'npm prune --production && NODE_ENV=production npm start'
+    memory: 256M
+    random-route: true
+    env:
+      NPM_CONFIG_PRODUCTION: false
